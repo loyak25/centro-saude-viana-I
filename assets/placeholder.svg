@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<rect width="800" height="1000" fill="#dfe8e3"/>
+<circle cx="400" cy="350" r="120" fill="#a9bbb6"/>
+<path d="M190 780c28-150 145-230 210-230s182 80 210 230" fill="#a9bbb6"/>
+<circle cx="400" cy="350" r="122" fill="none" stroke="#f7f8f5" stroke-width="8" opacity=".7"/>
+<text x="400" y="900" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#355b57" letter-spacing="4">FOTOGRAFIA</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#55736f">A disponibilizar</text>
+</svg>
