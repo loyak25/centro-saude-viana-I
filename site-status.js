@@ -4,7 +4,7 @@
    false = website temporariamente indisponível
    ========================================================= */
 
-window.SITE_ATIVO = false;
+window.SITE_ATIVO = true;
 
 (function () {
   "use strict";
