@@ -1,227 +1,168 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-AO">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Site Temporariamente Indisponível</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            background: #09263A;
-        }
-
-        .page {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .page::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    rgba(9, 38, 58, 0.78),
-                    rgba(9, 38, 58, 0.82)
-                ),
-                url("fundo.jpg");
-
-            background-size: cover;
-            background-position: center;
-
-            animation: zoom 18s ease-in-out infinite alternate;
-
-            z-index: -1;
-        }
-
-        .content {
-            width: min(700px, 90%);
-            padding: 40px 20px;
-
-            animation: entrada 1.2s ease forwards;
-        }
-
-        .icon {
-            width: 75px;
-            height: 75px;
-            margin: 0 auto 25px;
-
-            border: 3px solid #278E6F;
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 32px;
-
-            animation: pulse 2.5s infinite;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 6vw, 4.5rem);
-            line-height: 1.05;
-            margin-bottom: 20px;
-        }
-
-        h1 span {
-            color: #278E6F;
-        }
-
-        p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            line-height: 1.7;
-            color: rgba(255,255,255,0.88);
-        }
-
-        .line {
-            width: 90px;
-            height: 4px;
-            background: #278E6F;
-            margin: 30px auto;
-            border-radius: 10px;
-
-            animation: loading 2s infinite alternate;
-        }
-
-        .copyright {
-            position: absolute;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            width: 90%;
-
-            font-size: 12px;
-            letter-spacing: 1px;
-
-            color: rgba(255,255,255,0.65);
-        }
-
-        .copyright strong {
-            color: #278E6F;
-        }
-
-        @keyframes zoom {
-
-            from {
-                transform: scale(1.02);
-            }
-
-            to {
-                transform: scale(1.10);
-            }
-
-        }
-
-        @keyframes entrada {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-        @keyframes pulse {
-
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(39,142,111,0.5);
-            }
-
-            50% {
-                box-shadow: 0 0 0 15px rgba(39,142,111,0);
-            }
-
-        }
-
-        @keyframes loading {
-
-            from {
-                width: 60px;
-            }
-
-            to {
-                width: 140px;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            .content {
-                padding: 30px 15px;
-            }
-
-            .icon {
-                width: 65px;
-                height: 65px;
-                font-size: 27px;
-            }
-
-            .copyright {
-                font-size: 10px;
-            }
-
-        }
-
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Landing page institucional — Viana I.">
+  <title>Viana I - ANA PAULA — Saúde, cuidado e excelência</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header" id="header">
+    <a class="brand" href="#inicio" aria-label="Viana I  — início">
+      <span class="brand-mark">V</span>
+      <span><strong>VIANA I - ANA PAULA</strong><small>Saúde &amp; Cuidado</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#instituicao">Instituição</a>
+      <a href="#equipa">Equipa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#acompanhamentos">Acompanhamentos</a>
+      <a href="#feedback">Sugestões e Reclamações</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <a class="header-cta" href="#contactos">Fale connosco <span>↗</span></a>
+  </header>
 
-    <main class="page">
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-media"><img src="assets/hero-hospital.jpg" alt="Profissionais de saúde a prestar cuidados hospitalares"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow"><span></span> DMS Viana — Serviço Público de Saúde</div>
+        <h1>Saúde com <em>humanidade.</em><br>Excelência com propósito.</h1>
+        <p>Uma instituição comprometida com cuidados de saúde responsáveis, profissionais e próximos de cada pessoa.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#instituicao">Conheça a instituição <span>↓</span></a>
+          <a class="text-link" href="#equipa">Conhecer a nossa equipa <span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-meta"><span>01</span><i></i><span>07</span></div>
+      <a class="scroll-cue" href="#instituicao"><span>Rolar</span><b>↓</b></a>
+    </section>
 
-        <section class="content">
+    <section class="intro section" id="instituicao">
+      <div class="section-label reveal">01 — A instituição</div>
+      <div class="intro-grid">
+        <div class="reveal"><h2>Uma visão de saúde construída sobre <span>confiança.</span></h2></div>
+        <div class="intro-copy reveal"><p>Trabalhamos para proporcionar uma experiência de cuidado marcada pela competência técnica, responsabilidade e atenção genuína às necessidades de cada paciente.</p><p>O nosso compromisso começa nas pessoas e estende-se à qualidade dos serviços, à ética profissional e à melhoria contínua.</p></div>
+      </div>
+      <div class="stats reveal-group">
+        <div><strong>01</strong><span>Compromisso<br>com o paciente</span></div>
+        <div><strong>02</strong><span>Profissionais<br>dedicados</span></div>
+        <div><strong>03</strong><span>Qualidade e<br>responsabilidade</span></div>
+        <div><strong>04</strong><span>Cuidado<br>humanizado</span></div>
+      </div>
 
-            <div class="icon">
-                !
-            </div>
-
-            <h1>
-                Site temporariamente<br>
-                <span>indisponível.</span>
-            </h1>
-
-            <p>
-                Este website encontra-se temporariamente indisponível
-                enquanto concluímos os últimos procedimentos administrativos
-                do projeto.
-            </p>
-
-            <div class="line"></div>
-
-        </section>
-
-        <div class="copyright">
-            © 2026 <strong>Kutxi Tec</strong> — Todos os direitos reservados
+      <div class="institution-details">
+        <div class="section-label reveal">02 — Sobre a Instituição</div>
+        <div class="intro-grid">
+          <div class="reveal">
+            <h2>Saúde pública ao serviço da comunidade <span>confiança.</span></h2>
+          </div>
+          <div class="intro-copy reveal">
+            <h3>Uma instituição com história</h3>
+            <p>Doação da cooperação espanhola de médicos "Medicus Mundi Catalunia".</p>
+            <p>Inaugurada em 02 de Abril de 1994 pela Dra. Ana Paula dos Santos.</p>
+            <h3>Área</h3>
+            <p>Parte construída: 138.914 m²<br>Parte frontal por construir: 5.445 m²<br>Área total: 144.359 m²</p>
+          </div>
         </div>
 
-    </main>
+        <div class="section-label reveal">— Limites</div>
+        <div class="stats reveal-group">
+          <div><strong>Norte</strong><span>Empresa das Jembas II<br>e estrada de Calumbo</span></div>
+          <div><strong>Sul</strong><span>Bairro 1º de Maio<br>e Escola Nacional Penitenciária</span></div>
+          <div><strong>Oeste</strong><span>Escola Preparatória e<br>Administração Municipal de Viana</span></div>
+          <div><strong>Leste</strong><span>Bairro 4 de Abril<br>e Regedoria</span></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="leadership section" id="equipa">
+      <div class="leadership-head">
+        <div class="reveal"><div class="section-label">03 — A Nossa Equipa</div><h2>Conheça os profissionais que fazem parte da <span>nossa unidade.</span></h2></div>
+        <p class="reveal">A Direcção mantém o destaque institucional, enquanto a equipa completa é organizada por áreas para facilitar a consulta dos profissionais.</p>
+      </div>
+      <div class="team-categories reveal-group" id="teamCategories"></div>
+      <div class="team-toolbar reveal">
+        <div><span class="team-kicker">Equipa institucional</span><h3 id="teamTitle">Direcção</h3><p id="teamDescription">Conheça os responsáveis pela orientação da instituição.</p></div>
+        <div class="team-count"><strong id="teamCount">03</strong><span>profissionais<br>apresentados</span></div>
+      </div>
+      <div class="team-search reveal">
+        <label><span>⌕</span><input id="teamSearch" type="search" placeholder="Pesquisar por nome ou função..." autocomplete="off"></label>
+        <span id="teamSearchMeta">Pesquise entre os profissionais cadastrados</span>
+      </div>
+      <div class="director-grid team-grid" id="teamGrid"></div>
+      <div class="team-note reveal"><span>150</span><div><strong>Cadastro inicial da equipa</strong><p>A listagem fornecida pela instituição foi cadastrada nesta versão. As fotografias serão adicionadas posteriormente na pasta <code>assets/equipa/fotos/</code>, usando o ID de cada profissional.</p></div></div>
+      <div class="team-note reveal"><span>QR</span><div><strong>Passes profissionais e perfis digitais</strong><p>Cada profissional poderá ter um perfil individual ligado ao seu passe através de QR Code. A página individual terá acesso directo ao perfil e um botão para regressar à página principal.</p></div></div>
+    </section>
+
+    <section class="services section" id="servicos">
+      <div class="section-label reveal">04 — Serviços</div>
+      <div class="services-head">
+        <div class="reveal"><h2>Cuidados pensados para <span>cada necessidade.</span></h2></div>
+        <p class="reveal">Conheça os principais serviços prestados pela unidade, organizados de forma simples para facilitar a consulta.</p>
+      </div>
+      <div class="service-grid reveal-group">
+        <article class="service-card"><span class="service-number">01</span><div class="service-icon">+</div><h3>Banco de Urgências</h3><p>Atendimento e assistência aos utentes em situações de urgência.</p></article>
+        <article class="service-card"><span class="service-number">02</span><div class="service-icon">M</div><h3>Maternidade e Sala de Partos</h3><p>Assistência à gestante e cuidados relacionados ao parto.</p></article>
+        <article class="service-card"><span class="service-number">03</span><div class="service-icon">P</div><h3>Pediatria</h3><p>Acompanhamento e cuidados de saúde destinados ao público infantil.</p></article>
+        <article class="service-card"><span class="service-number">04</span><div class="service-icon">C</div><h3>Medicina e Enfermagem</h3><p>Consultas, cuidados de enfermagem e procedimentos de rotina.</p></article>
+        <article class="service-card"><span class="service-number">05</span><div class="service-icon">V</div><h3>PAV — Vacinação</h3><p>Serviços de vacinação integrados ao Programa Alargado de Vacinação.</p></article>
+        <article class="service-card"><span class="service-number">06</span><div class="service-icon">L</div><h3>Laboratório</h3><p>Realização de exames clínicos e apoio ao diagnóstico.</p></article>
+      </div>
+
+      <div class="follow-section reveal" id="acompanhamentos">
+        <div class="follow-copy"><div class="section-label">05 — Acompanhamentos</div><h2>Programas de <span>seguimento contínuo.</span></h2><p>Além dos atendimentos gerais, a unidade acompanha utentes integrados em programas específicos de saúde.</p></div>
+        <div class="follow-grid">
+          <div class="follow-card"><b>H</b><h3>Hepatite</h3><p>Seguimento e cuidados no âmbito do programa.</p></div>
+          <div class="follow-card"><b>T</b><h3>Tuberculose</h3><p>Acompanhamento dos utentes integrados no programa.</p></div>
+          <div class="follow-card"><b>H+</b><h3>HIV/SIDA</h3><p>Seguimento e apoio aos utentes em acompanhamento.</p></div>
+          <div class="follow-card"><b>PF</b><h3>Planeamento Familiar</h3><p>Orientação e acompanhamento em saúde reprodutiva.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback section" id="feedback">
+      <div class="section-label reveal">06 — Participação do utente</div>
+      <div class="feedback-grid">
+        <div class="reveal"><h2>A sua opinião ajuda-nos a <span>melhorar.</span></h2><p>Partilhe uma sugestão ou relate uma situação que mereça atenção. A participação dos utentes é parte importante da melhoria contínua.</p><div class="feedback-types"><button type="button" data-feedback-type="Sugestão"><strong>Sugestão</strong><span>Uma ideia ou proposta de melhoria.</span></button><button type="button" data-feedback-type="Reclamação"><strong>Reclamação</strong><span>Uma situação que merece atenção.</span></button></div></div>
+        <form class="feedback-form reveal" id="feedback-form">
+          <div class="form-row"><label>Tipo de mensagem<select name="tipo" required><option value="">Selecione</option><option>Sugestão</option><option>Reclamação</option></select></label><label>Nome <small>(opcional)</small><input name="nome" placeholder="O seu nome"></label></div>
+          <label>Contacto <small>(opcional)</small><input name="contacto" placeholder="Telefone ou e-mail"></label>
+          <label>Mensagem<textarea name="mensagem" rows="6" required placeholder="Escreva aqui a sua sugestão ou reclamação..."></textarea></label>
+          <div class="form-bottom"><span>A sua mensagem será tratada com respeito e responsabilidade.</span><button class="btn btn-dark" type="submit">Enviar mensagem <span>→</span></button></div>
+          <div class="feedback-success" id="feedback-success">Mensagem registada nesta interface. O formulário pode ser ligado posteriormente ao e-mail ou sistema de gestão da instituição.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact section" id="contactos">
+      <div class="section-label reveal">07 — Contactos</div>
+      <div class="contact-grid">
+        <div class="reveal"><h2>Estamos aqui<br>para <span>si.</span></h2><p>Entre em contacto com a instituição para obter informações sobre os nossos serviços, acompanhamento e atendimento.</p></div>
+        <div class="contact-card reveal"><div><small>Atendimento</small><strong>Informações institucionais</strong></div><div><small>Localização</small><strong>Viana, Angola</strong></div><div><small>Contacto</small><strong>Consulte os canais oficiais</strong></div><a class="btn btn-dark" href="#inicio">Voltar ao início <span>↑</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">KT</span><span><strong>KUTXI TEC</strong><small>•Design • Desenvolvimento Web &amp; Serviços Técnicos</small></span></div><p>© <span id="year"></span> Viana I / ANA PAULA. Todos os direitos reservados a Kutxi Tec.</p></footer>
+
+  <div class="modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" aria-label="Fechar" data-close>×</button>
+      <div class="modal-photo"><img id="modalPhoto" src="" alt=""></div>
+      <div class="modal-copy"><div class="section-label">Perfil profissional</div><span class="modal-role" id="modalRole"></span><h2 id="modalName"></h2><div class="modal-line"></div><p id="modalBio"></p><div class="profile-facts"><div><small>Categoria profissional</small><strong id="modalCategory"></strong></div><div><small>Observação</small><strong id="modalFunction"></strong></div></div><div class="modal-actions"><a class="btn btn-dark" id="modalProfileLink" href="#">Abrir perfil completo <span>↗</span></a></div></div>
+    </div>
+  </div>
+  <script src="team-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
